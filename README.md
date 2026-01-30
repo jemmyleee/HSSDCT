@@ -249,13 +249,11 @@ Quantitative comparison on the AVIRIS dataset (see Table 1 in the paper):
 If you find this work useful in your research, please consider citing:
 
 ```bibtex
-@inproceedings{hssdct2026icassp,
-  title     = {HSSDCT: Hierarchical Swin-Transformer-Based Deep Convolutional Network for Hyperspectral and Multispectral Image Fusion},
-  author    = {[Author Names]},
+@inproceedings{lee2026hssdct,
+  title     = {HSSDCT: Factorized Spatial-Spectral Correlation for Hyperspectral Image Fusion},
+  author    = {Lee, Chia-Ming and Ho, Yu-Hao and Lin, Yu-Fan and Lee, Jen-Wei and Kang, Li-Wei and Hsu, Chih-Chung},
   booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  year      = {2026},
-  pages     = {[Page Numbers]},
-  doi       = {[DOI]}
+  year      = {2026}
 }
 ```
 
