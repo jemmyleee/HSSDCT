@@ -177,46 +177,25 @@ python train.py \
 
 ```
 HSSDCT/
-├── train.py              # Main training script with training loop and validation
-├── dataset.py            # Dataset classes for LRHSI+HRMSI fusion
-│                         # - dataset_joint: Pairwise (LRHSI + HRMSI) loading
-│                         # - dataset_joint2: Triplet (LRHSI + HRMSI + CO) loading
-│                         # - dataset_h5: Single input mode
-├── trainOps.py           # Training utilities and evaluation metrics
-│                         # - sam_loss: Spectral Angle Mapper loss
-│                         # - BandWiseMSE: Band-wise weighted MSE loss
-│                         # - psnr, ERGAS, rmse: Evaluation metrics
-│                         # - Wavelet transform utilities
-├── utils.py              # Model utilities (Swish activation, padding helpers)
+├── train.py              # Main training script (training loop & validation)
+├── dataset.py            # Dataset classes for data loading
+│                         # - Pairwise (LRHSI + HRMSI) & Triplet loading
+├── trainOps.py           # Training utilities & Evaluation metrics
+│                         # - Losses: SAM Loss, BandWise MSE
+│                         # - Metrics: PSNR, ERGAS, RMSE
+├── utils.py              # General utilities (Activation, padding)
 ├── requirements.txt      # Python dependencies
-│
 ├── models/
 │   ├── __init__.py
 │   ├── hssdct.py         # Main model architecture
-│   │                     # - HyDCFN: Main fusion network
-│   │                     # - YDCFN: Dual-branch feature extraction
-│   │                     # - SCC: Spatial-Channel Correlation module
-│   │                     # - HierarchicalTransformerBlock: Swin-based blocks
-│   │                     # - MultiScaleFeatFusionBlock: Dense feature fusion
+│   │                     # - HSSDCT Framework
+│   │                     # - HDRTB (Hierarchical Dense-Residue Transformer Block)
+│   │                     # - SSCL (Spatial-Spectral Correlation Layer)
 │   └── module_util.py    # Weight initialization utilities
-│
-├── data_path/
-│   ├── train.txt         # Training sample list
-│   ├── val.txt           # Validation sample list
-│   └── test.txt          # Test sample list
-│
-├── checkpoint/           # Saved model weights
-│   └── <prefix>/
-│       ├── best.pth      # Best model (lowest SAM)
-│       └── last.pth      # Latest model checkpoint
-│
-├── log/                  # TensorBoard logs
-│   └── <prefix>_exp2/
-│       └── events.out.tfevents.*
-│
-└── Rec/                  # Reconstructed results
-    └── <prefix>/
-        └── *.mat         # Predicted hyperspectral images
+└── data_path/
+    ├── train.txt         # Training sample list
+    ├── val.txt           # Validation sample list
+    └── test.txt          # Test sample list
 ```
 
 ---
