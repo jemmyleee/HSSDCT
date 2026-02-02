@@ -11,7 +11,6 @@
 
 ## 🚀 News
 - **[2026/01]** 🔥 Our paper has been accepted by **ICASSP 2026**!
-- **[2026/01]** Code and pre-trained models are released.
 
 ## Abstract
 
